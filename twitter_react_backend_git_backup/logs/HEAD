@@ -1,3 +1,0 @@
-0000000000000000000000000000000000000000 a72f53934e86344d807e47f8b36f8367adf3a6e2 Junpei <jun@note-Computer.local> 1693106137 +0900	commit (initial): Initialize project using Create React App
-a72f53934e86344d807e47f8b36f8367adf3a6e2 0f71ebd80c2c7422fe7355a8b6d0eb6962903705 Junpei <jun@note-Computer.local> 1693106800 +0900	commit: 最初のコミット
-0f71ebd80c2c7422fe7355a8b6d0eb6962903705 1c83e5b3f3d97cad49c320ea6b181b582cb45aef Junpei <jun@note-Computer.local> 1693120949 +0900	commit: ユーザーをフォローする機能まで実装
