@@ -36,7 +36,7 @@ export default function Profile() {
                 className="profileCoverImg"
               />
               <img
-                src={user.profilePicture || PUBLIC_FOLDER + "/person/noAvatar.png"}
+                src={PUBLIC_FOLDER + user.profilePicture || PUBLIC_FOLDER + "/person/noAvatar.png"}
                 alt=""
                 className="profileUserImg"
               />
