@@ -20,10 +20,10 @@ router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
     if (!user) return res.status(404).send("ユーザーが見つかりません");
-    console.log(user.password);
-    console.log(user);
+
     const validPassword = req.body.password === user.password;
     if (!validPassword) return res.status(404).send("パスワードが違います");
+
     return res.status(200).json(user)
   } catch (err) {
     res.status(500).json(err)

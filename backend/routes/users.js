@@ -37,7 +37,6 @@ router.get("/", async (req, res) => {
     const user = userId
       ? await User.findById(userId)
       : await User.findOne({ username: username });
-    console.log(user);
     const { password, updatedAt, ...other } = user._doc;
     return res.status(200).json(other);
   } catch (err) {
@@ -53,8 +52,6 @@ router.put("/:id/follow", async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
     const currentUser = await User.findById(req.body.id);
-    console.log(user);
-    console.log(currentUser);
     if (!user.followers.includes(req.body.id)) {
       await user.updateOne({
         $push: {
@@ -81,8 +78,6 @@ router.put("/:id/unfollow", async (req, res) => {
     try {
       const user = await User.findById(req.params.id);
       const currentUser = await User.findById(req.body.id);
-      console.log(user);
-      console.log(currentUser);
       if (user.followers.includes(req.body.id)) {
         await user.updateOne({
           $pull: {
